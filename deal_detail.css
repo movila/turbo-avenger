@@ -33,7 +33,7 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 
 /* ~~ 此容器包含所有其它 div，并依百分比设定其宽度 ~~ */
 .container {
-	width: 60%;
+	width: 65%;
 	max-width: 1260px;/* 可能需要最大宽度，以防止此布局在大型显示器上过宽。这将使行长度更便于阅读。IE6 不遵循此声明。 */
 	min-width: 780px;/* 可能需要最小宽度，以防止此布局过窄。这将使侧面列中的行长度更便于阅读。IE6 不遵循此声明。 */
 	background: #FFF;
@@ -44,11 +44,10 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 .sidebar{
 	float: right;
 	width: 25%;
-	height: 1100px;
 }
 
 .sidebarTop{
-	height:19%;
+	height:25%;
 	border-style:solid;
 	border-width: 1px;
 	border-color: #B4B5B2;
@@ -61,7 +60,7 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 }
 .button{
 	background: #E4E4E4;
-	padding: 15px 5px 15px 5px;
+	padding: 14px 5px 14px 5px;
 	text-decoration: none;
 	font-size: 13px;
 	font-weight: bold;
@@ -77,45 +76,76 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 }
 
 .sidebarMid{
-	height:13%;
+	height:14%;
 	border-right-style:solid;
 	border-bottom-style:solid;
 	border-left-style:solid;
 	border-width: 1px;
 	border-color: #B4B5B2;
 }
-.sidebarMid h5{
+.sidebarMid ul h5{
 	margin-top: 0;
 	margin-bottom: 0;
-	padding: 15px 0 10px 18px;
+	padding: 13px 0 10px 0;
 	color: #5D5655;
 }
 .sidebarMid ul{
-	padding-left: 17px;
-	padding-right: 11px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 81%;
 }
 .sidebarMid ul li{
 	display:inline;
 }
 .sidebarMid ul li img{
-	width: 24px;
-	height: 24px;
+	width: 25px;
+	height: 25px;
 	padding-left: 1px;
 }
-.sidebarMid a{
+.sidebarMid ul a{
 	font-size: 13px;
 	font-weight: bold;
-	padding-left: 18px;
 }
+
 .sidebarBot{
-	height: 68%;
+	height: 65%;
 	border-right-style:solid;
 	border-left-style:solid;
 	border-width: 1px;
 	border-color: #B4B5B2;
 }
+.hotDealHeader{
+	background-color: #E4E4E4;
+	color: #5D5655;
+	padding: 7px 0 7px 9px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.hotDeal{
+	border-bottom-style:solid;
+	border-width: 1px;
+	border-color: #B4B5B2;
+}
+.hotDeal dt a img{
+	width: 78px;
+	height: 53px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #B4B5B2;
+}
+.hotDeal dd{
+	font-size: 13px;
+	color: #5D5655;
+	display:block;
+	padding: 15px 5px 15px 0;
+	margin-left: 12px;
+}
+.hotDeal dt{
+	float:left;
+	padding: 15px 7px 0 10px;
+}
 /* End the Sidebar Setting*/
-
+/*------------------------------------------------------------------------------------------*/
 /*Content Setting*/
 .content {
 	width: 75%;
@@ -169,7 +199,7 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 .footbutton{
 	background: #f0f0f0;
 	height:100px;
-	margin-top: 10px;
+	margin-top: 42px;
 }
 
 .button2{
