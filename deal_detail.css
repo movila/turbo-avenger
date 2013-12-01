@@ -47,15 +47,16 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 }
 
 .sidebarTop{
-	height:25%;
 	border-style:solid;
 	border-width: 1px;
 	border-color: #B4B5B2;
+	padding-top: 10px;
+	padding-bottom: 20px;
 }
+
 .center{
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:23px;
 	width:85%;
 }
 .button{
@@ -76,12 +77,12 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 }
 
 .sidebarMid{
-	height:14%;
 	border-right-style:solid;
 	border-bottom-style:solid;
 	border-left-style:solid;
 	border-width: 1px;
 	border-color: #B4B5B2;
+	padding-bottom: 10px;
 }
 .sidebarMid ul h5{
 	margin-top: 0;
