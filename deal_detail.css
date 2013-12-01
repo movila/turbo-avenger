@@ -8,7 +8,7 @@ body {
 }
 
 /* ~~ 元素/标签选择器 ~~ */
-ul, ol, dl { /* 由于浏览器之间的差异，最佳做法是在列表中将填充和边距都设置为零。为了保持一致，您可以在此处指定需要的数值，也可以在列表所包含的列表项（LI、DT 和 DD）中指定需要的数值。请注意，除非编写一个更为具体的选择器，否则您在此处进行的设置将会层叠到 .nav 列表。 */
+ul, ol, dl { 
 	padding: 0;
 	margin: 0;
 }
@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6, p {
 	padding-left: 10px; 
 	color: #000;
 }
-a img { /* 此选择器将删除某些浏览器中显示在图像周围的默认蓝色边框（当该图像包含在链接中时） */
+a img { 
 	border: none;
 }
 /* general a setting*/
@@ -25,8 +25,8 @@ a {
 	color: #5D5655;
 	text-decoration: underline;
 }
-/* ~~ 站点链接的样式必须保持此顺序，包括用于创建悬停效果的选择器组在内。 ~~ */
-a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠标使用者相同的悬停体验。 */
+
+a:hover, a:active, a:focus { 
 	text-decoration: underline;
 	color: #000;
 }
@@ -34,11 +34,11 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 /* ~~ 此容器包含所有其它 div，并依百分比设定其宽度 ~~ */
 .container {
 	width: 65%;
-	max-width: 1260px;/* 可能需要最大宽度，以防止此布局在大型显示器上过宽。这将使行长度更便于阅读。IE6 不遵循此声明。 */
-	min-width: 780px;/* 可能需要最小宽度，以防止此布局过窄。这将使侧面列中的行长度更便于阅读。IE6 不遵循此声明。 */
+	max-width: 1260px;
+	min-width: 780px;
 	background: #FFF;
-	margin: 0 auto; /* 侧边的自动值与宽度结合使用，可以将布局居中对齐。如果将 .container 宽度设置为 100%，则不需要此设置。 */
-	overflow: hidden; /* 此声明将使 .container 清除其包含的所有浮动列。 */
+	margin: 0 auto;
+	overflow: hidden;  
 }
 /* Sidebar Setting*/
 .sidebar{
@@ -82,12 +82,12 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 	border-left-style:solid;
 	border-width: 1px;
 	border-color: #B4B5B2;
-	padding-bottom: 10px;
+	padding-bottom: 15px;
 }
 .sidebarMid ul h5{
 	margin-top: 0;
 	margin-bottom: 0;
-	padding: 13px 0 10px 0;
+	padding: 15px 0 10px 0;
 	color: #5D5655;
 }
 .sidebarMid ul{
@@ -219,21 +219,21 @@ a:hover, a:active, a:focus { /* 此组选择器将为键盘导航者提供与鼠
 }
 /* ~~ 此分组的选择器为 .content 区域中的列表提供了空间 ~~ */
 .content ul, .content ol { 
-	padding: 0 15px 15px 40px; /* 此填充反映上述标题和段落规则中的右填充。填充放置于下方可用于间隔列表中其它元素，置于左侧可用于创建缩进。您可以根据需要进行调整。 */
+	padding: 0 15px 15px 40px; 
 }
 
 
 
 /* ~~ 其它浮动/清除类 ~~ */
-.fltrt {  /* 此类可用于在页面中使元素向右浮动。浮动元素必须位于其在页面上的相邻元素之前。 */
+.fltrt { 
 	float: right;
 	margin-left: 8px;
 }
-.fltlft { /* 此类可用于在页面中使元素向左浮动。浮动元素必须位于其在页面上的相邻元素之前。 */
+.fltlft { 
 	float: left;
 	margin-right: 8px;
 }
-.clearfloat { /* 如果从 .container 中删除了 overflow:hidden，则可以将此类放置在 <br /> 或空 div 中，作为 #container 内最后一个浮动 div 之后的最终元素 */
+.clearfloat { 
 	clear:both;
 	height:0;
 	font-size: 1px;
