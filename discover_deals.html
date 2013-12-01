@@ -14,32 +14,33 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/custom.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header id="nav-header">
+        <header id="nav-header" class="clearfix">
             <div class="left">
                 <div id="site-logo">
-                    <a href="/">Logo</a>
+                    <h1><a href="/">LOGO</a></h1>
                 </div>
                 <ul class="menu">
-                    <li class="menu-items"><a href="/">Discover Deals</a></li>
+                    <li class="menu-items"><a class="active" href="/">Discover Deals</a></li>
                     <li class="menu-items"><a href="/saved-deals">Saved Deals<span class="badge">12</span></a></li>
                     <li class="menu-items"><a href="/loyalty-programs">Loyalty Programs</a></li>
                 </ul>
             </div>
             <div class="right">
                 <ul class="menu">
-                    <li><a href="/sign-up">Sign Up</a></li>/
+                    <li><a href="/sign-up">Sign Up</a>&nbsp;/&nbsp;</li>
                     <li><a href="/sign-in">Sign In</a></li>
                 </ul>
             </div>
         </header>
 
-        <div class="body-container">
+        <div id="body-container" class="clearfix">
             <aside id="sidebar">
                 <div id="search-box">
                     <form action="/search" method="get" id="search">
@@ -54,12 +55,41 @@
                             <header class="filter-header">Loyalty Programs</header>
                             <div class="filter-content active">
                                 <ul class="criteria">
-                                    <li class="filter-all"><label>Select All <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
+                                    <li class="filter-option">
+                                        <label for="prog-all">
+                                            SELECT ALL 
+                                            <input id="prog-all" type="checkbox" name="prog">
+                                            <label class="check-mark" for="prog-all"></label>
+                                        </label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <label for="prog1">
+                                            <span class="icon-holder"></span>Program name 
+                                            <input id="prog1" type="checkbox" name="prog">
+                                            <label class="check-mark" for="prog1"></label>
+                                        </label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <label for="prog2">
+                                            <span class="icon-holder"></span>Program name 
+                                            <input id="prog2" type="checkbox" name="prog">
+                                            <label class="check-mark" for="prog2"></label>
+                                        </label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <label for="prog3">
+                                            <span class="icon-holder"></span>Program name 
+                                            <input id="prog3" type="checkbox" name="prog">
+                                            <label class="check-mark" for="prog3"></label>
+                                        </label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <label for="prog4">
+                                            <span class="icon-holder"></span>Program name 
+                                            <input id="prog4" type="checkbox" name="prog">
+                                            <label class="check-mark" for="prog4"></label>
+                                        </label>
+                                    </li>
                                 </ul>
                             </div>
                         </section>
@@ -67,12 +97,28 @@
                             <header class="filter-header">Sponsor / Retailer</header>
                             <div class="filter-content">
                                 <ul class="criteria">
-                                    <li class="filter-all"><label>Select All <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
+                                    <li class="filter-option">
+                                        <label for="prog-all1">
+                                            SELECT ALL 
+                                            <input id="prog-all1" type="checkbox" name="prog">
+                                            <label class="check-mark" for="prog-all1"></label>
+                                        </label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Program name 
+                                        <input id="prog5" type="checkbox" name="prog">
+                                        <label class="check-mark" for="prog5"></label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Program name 
+                                        <input id="prog6" type="checkbox" name="prog">
+                                        <label class="check-mark" for="prog6"></label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Program name 
+                                        <input id="prog7" type="checkbox" name="prog">
+                                        <label class="check-mark" for="prog7"></label>
+                                    </li>
                                 </ul>
                             </div>
                         </section>
@@ -80,12 +126,28 @@
                             <header class="filter-header">Deal Category</header>
                             <div class="filter-content">
                                 <ul class="criteria">
-                                    <li class="filter-all"><label>Select All <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
+                                    <li class="filter-option">
+                                        <label for="prog-all2">
+                                            SELECT ALL 
+                                            <input id="prog-all2" type="checkbox" name="prog">
+                                            <label class="check-mark" for="prog-all2"></label>
+                                        </label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Program name 
+                                        <input id="prog8" type="checkbox" name="prog">
+                                        <label class="check-mark" for="prog8"></label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Program name 
+                                        <input id="prog9" type="checkbox" name="prog">
+                                        <label class="check-mark" for="prog9"></label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Program name 
+                                        <input id="prog0" type="checkbox" name="prog">
+                                        <label class="check-mark" for="prog0"></label>
+                                    </li>
                                 </ul>
                             </div>
                         </section>
@@ -93,12 +155,33 @@
                             <header class="filter-header">Lable</header>
                             <div class="filter-content active">
                                 <ul class="criteria">
-                                    <li class="filter-all"><label>Select All <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
-                                    <li class="filter-option"><label><span class="icon-holder"></span> Program name <input type="checkbox"></label></li>
+                                    <li class="filter-option">
+                                        <label for="label-select-all">
+                                            Select All
+                                            <input id="label-select-all" type="checkbox" name="label-select-all">
+                                            <label class="check-mark" for="label-select-all"></label>
+                                        </label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>New
+                                        <input id="label-new" type="checkbox" name="label-new">
+                                        <label class="check-mark" for="label-new"></label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Hot Picks
+                                        <input id="label-hot" type="checkbox" name="label-hot">
+                                        <label class="check-mark" for="label-hot"></label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Most Saved
+                                        <input id="label-most-saved" type="checkbox" name="label-most-saved">
+                                        <label class="check-mark" for="label-most-saved"></label>
+                                    </li>
+                                    <li class="filter-option">
+                                        <span class="icon-holder"></span>Expiring Soon
+                                        <input id="label-soon" type="checkbox" name="label-soon">
+                                        <label class="check-mark" for="label-soon"></label>
+                                    </li>
                                 </ul>
                             </div>
                         </section>
@@ -106,7 +189,7 @@
                 </div>
             </aside>
             <div id="content">
-                <div id="menu-header">
+                <div id="menu-header" class="clearfix">
                     <div class="left">
                         <ul>
                             <li class="active"><a href="#">All</a></li>
@@ -114,7 +197,7 @@
                         </ul>
                     </div>
                     <div class="right">
-                        <p>1,000+ results</p>
+                        <span id="results">1,000+ results</span>
                     </div>
                 </div>
                 <div id="main-content">
@@ -360,7 +443,7 @@
             </div>
         </div>
 
-        <footer id="footer">
+        <footer id="footer" class="clearfix">
             <div class="left">
                 <p>Copyright © 2013 Logo</p>
             </div>
@@ -374,12 +457,12 @@
             </div>
         </footer>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -387,6 +470,6 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+        </script>-->
     </body>
 </html>
