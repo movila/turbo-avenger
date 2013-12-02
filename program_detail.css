@@ -7,7 +7,7 @@ body {
 	color: #000;
 }
 
-/* ----------------------------------general setting---------------------------------------------- */
+/* ~~ 元素/标签选择器 ~~ */
 ul, ol, dl { 
 	padding: 0;
 	margin: 0;
@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6, p {
 a img { 
 	border: none;
 }
-
+/* general a setting*/
 a {
 	color: #5D5655;
 	text-decoration: underline;
@@ -31,48 +31,23 @@ a:hover, a:active, a:focus {
 	color: #000;
 }
 
-/* -------------------------------------end general setting----------------------------------------*/
-
-/* -------------------------------------specific setting------------------------------------------*/
+/* ~~ 此容器包含所有其它 div，并依百分比设定其宽度 ~~ */
 .container {
-	width: 60%;
+	width: 65%;
 	max-width: 1260px;
 	min-width: 780px;
 	background: #FFF;
 	margin: 0 auto;
 	overflow: hidden;  
 }
-/* -------------------------------------Sidebar Setting-------------------------------------------*/
+/* Sidebar Setting*/
 .sidebar{
 	float: right;
-	width: 28%;
+	width: 25%;
 }
 
-.sidebar_logo{
-	border-left-style:solid;
-	border-width: 1px;
-	border-color: #B4B5B2;
-	padding: 10px 0 2px 15px;
-}
-
-.logo:before , .logo:after {
-	clear: both;
-	content: " ";
-	display:table;
-}
-.logo dt{
-	float:left;
-}
-.logo dt img{
-	width: 50px;
-	height: 50px;
-}
-.logo dd{
-	
-}
-
-.sidebar_button{
-	border-style: solid;
+.sidebarTop{
+	border-style:solid;
 	border-width: 1px;
 	border-color: #B4B5B2;
 	padding-top: 10px;
@@ -82,7 +57,7 @@ a:hover, a:active, a:focus {
 .center{
 	margin-left:auto;
 	margin-right:auto;
-	width: 90%;
+	width:85%;
 }
 .button{
 	background: #E4E4E4;
@@ -174,78 +149,79 @@ a:hover, a:active, a:focus {
 /*------------------------------------------------------------------------------------------*/
 /*Content Setting*/
 .content {
-	width: 72%;
+	width: 75%;
 }
 
-.header_content{
+.logo{
+	height: 120px;
+	background: #E4E4E4;
+	margin-bottom: 20px;
 }
-.deal_label{
-	background: #5D5655;
-	color: white;
+
+.logo img{
 	width: 80px;
-	padding: 2px 0 2px 0;
-	margin-left: 30px;
-	margin-top: 15px;
-	font-size:14px;
-	text-align: center;
-	
+	height: 80px;
+	padding-left: 30px;
+	padding-top:20px;
 }
-.title{
-	margin-left:20px;
-	margin-top: 13px;
-	margin-bottom: 13px;
-}
-
-.img_container img{
-	margin-left:auto;
-	margin-right:auto;
-	width:100%;
-	height: 220px;
-	display:block;
-}
-.section_content{
+.article{
 	padding-left: 20px;
 	padding-right: 20px;
 }
-.section_content h4{
+
+.article h3{}
+.article h4{
+	margin-top: 30px;
 	color: #5D5655;
-	margin-top: 20px;
-	margin-bottom: 13px;
 }
-.section_content p{
+.article p{
 	font-size: 14px;
 	color: #5D5655;
-	margin-top: 0px;
-	margin-bottom: 0px;
+	margin-top: -14px;
+	padding-bottom: 12px;
 }
-.link a{
+.article a{
 	font-size: 14px;
-	margin-top: 0px;
+	margin-top: -10px;
 	padding-left: 10px;
-	margin-bottom: 0px;
+	display: block;
+	padding-bottom: 25px;
 }
-.section_content hr{
+.article hr{
 	margin-left: auto;
 	margin-right: auto;
-	width: 97%;
-	margin-bottom: 0px;
-	margin-top: 20px;
+	width: 96%;
+	margin-bottom: -15px;
 }
-.section_content ul{
+.article ul{
 	font-size: 14px;
 	color: #4d4d4d;
-	margin-top: 0px;
-	margin-bottom:0px;
+	margin-top: -14px;
 }
 
-.comments{
+.footbutton{
 	background: #f0f0f0;
-	margin-top: 25px;
+	height:100px;
+	margin-top: 42px;
 }
 
+.button2{
+	background: #808080;
+	padding: 10px 30px 10px 30px;
+	font-size:13px;
+	font-weight: bold;
+	color:white;
+}
+.center2{
+	margin-left: auto;
+	margin-right: auto;
+	width: 31%;
+	padding-top: 28px;
+
+}
 /* ~~ 此分组的选择器为 .content 区域中的列表提供了空间 ~~ */
 .content ul, .content ol { 
-	padding: 0 0 0 40px; 
+	padding: 0 15px 15px 40px; 
 }
 
 
