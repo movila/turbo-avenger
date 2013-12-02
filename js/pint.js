@@ -41,8 +41,7 @@ function arrange(force_refresh){
 					//nh = $img.width()/w * h;
 					nh = 231/w * h;
 					nh = Math.max(nh,150);
-					$img.attr('height', nh)
-.data('calcHeight', nh);
+					$img.attr('height', nh).data('calcHeight', nh);
 				}else{
 					nh = $img.height();
 				}
@@ -50,7 +49,7 @@ function arrange(force_refresh){
 
 			$li.css({top:bottoms[x], left:x*ITEM_WIDTH})
 			if(!$li.attr("src")) 
-$li.attr('src', $li.attr('data-src'));
+				$li.attr('src', $li.attr('data-src'));
 			bottoms[x] = bottoms[x] + nh + 20;
 		}
 		

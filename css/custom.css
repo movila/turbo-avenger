@@ -37,12 +37,20 @@ a {
 /* HEADER
 ====================================== */
 #nav-header {
-    position: relative;
+    position: fixed;
     overflow: hidden;
     height: 68px;
     background-color: white;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-    padding: 0 50px;
+    width: 100%;
+    z-index: 100;
+    top:0;
+}
+#nav-header > .left {
+    margin-left: 50px;
+}
+#nav-header > .right {
+    margin-right: 50px;
 }
 #site-logo {
     float: left;
@@ -99,6 +107,7 @@ a {
 /* MAIN CONTENT
 ====================================== */
 #body-container {
+    margin-top: 68px;
     width: 100%;
 }
 #sidebar {
@@ -108,6 +117,9 @@ a {
     box-shadow: 0 0 1px rgba(0,0,0,0.35);
     position: relative;
     float: left;
+}
+#content {
+    margin-bottom: 50px;
 }
 
 /* search bar - aside
@@ -317,18 +329,137 @@ a {
     margin: 10px auto;
     padding: 0;
     list-style: none;
+    position: relative;
 }
-.item-wrapper {
+#deal-list >.item-wrapper {
     position: absolute;
     float: left;
     width: 238px;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.15);
     overflow: hidden;
     z-index: 2;
     padding: 0;
     margin: 0;
+    background-color: white;
 }
-
-
+#deal-list > .item-wrapper > .list-item {
+    position: relative;
+}
+#deal-list > .item-wrapper > .list-item > .item-header {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #CACACA;
+}
+#deal-list > .item-wrapper > .list-item > .item-header > h5 {
+    display: inline-block;
+    margin: 0;
+    background-color: #999;
+    color: white;
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+#deal-list > .item-wrapper > .list-item > .item-header > .program-icon {
+    height: 50px;
+    overflow: hidden;
+    border-left: 1px solid #CACACA;
+}
+#deal-list > .item-wrapper > .list-item > .item-header > .program-icon > img {
+    padding: 5px 10px;
+    height: 40px;
+}
+#deal-list > .item-wrapper > .list-item > .item-image > img {
+    width: 100%;
+}
+#deal-list > .item-wrapper > .list-item > .item-description {
+    padding: 15px;
+    color: #454545;
+    font-size: 18px;
+}
+#deal-list > .item-wrapper > .list-item > .item-description > p {
+    margin: 0;
+}
+#deal-list > .item-wrapper > .list-item ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#deal-list > .item-wrapper > .list-item > .item-engagement {
+    background-color: #EDE9EB;
+    padding: 8px 16px;
+    border-top: 1px solid #CACACA;
+}
+#deal-list > .item-wrapper > .list-item > .item-engagement > ul > li {
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin-left: 5px;
+}
+#deal-list > .item-wrapper > .list-item > .item-engagement > ul > li:first-child {
+    margin-left: 0;
+}
+#deal-list > .item-wrapper > .list-item > .item-engagement > ul > li > img {
+    width: 30px;
+}
+#deal-list > .item-wrapper > .list-item > .item-engagement > .saved-result {
+    font-weight: bold;
+    line-height: 30px;
+    color: #666;
+}
+#deal-list > .item-wrapper > .list-item > .item-menu {
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.35);
+}
+#deal-list > .item-wrapper > .list-item .btn {
+    background-color: white;
+    padding: 3px 6px;
+    border-radius: 3px;
+    border: 1px solid #EDE9EB;
+    display: inline-block;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+#deal-list > .item-wrapper > .list-item .btn:first-child {
+    margin-left: 0;
+}
+#deal-list > .item-wrapper > .list-item .btn-text {
+    font-size: 20px;
+    vertical-align: middle;
+}
 /* FOOTER
 ====================================== */
+#footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #565556;
+    color: white;
+    z-index: 100;
+    padding: 10px 0;
+}
+#footer > .left {
+    margin-left: 50px;
+}
+#footer > .right {
+    margin-right: 50px;
+}
+#footer > .left > p {
+    margin: 0;
+}
+#footer .menu-help {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#footer .menu-help > li {
+    display: inline-block;
+}
+#footer .menu-help > li > a {
+    color: white;
+    text-decoration: none;
+}
