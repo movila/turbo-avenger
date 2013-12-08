@@ -241,13 +241,38 @@ a:hover, a:active, a:focus {
 	margin-bottom:0px;
 }
 
-.comment{
+.comment_box{
 	background: #f0f0f0;
 	margin-top: 25px;
 	height: 200px;
 }
-.comment_text{
-
+.comment_container{
+	padding-top: 15px;
+}
+.comment_form textarea{
+	resize: none;
+	margin: 0px;
+	margin-left: auto;
+	width: 90%;
+	margin-right: auto;
+	display: block;
+}
+.comment_form input{
+	float: right;
+	background: white;
+	font-size: 13px;
+	font-weight: bold;
+	color: #5D5655;
+	padding: 7px 15px 7px 15px;
+	border: 1px solid #B4B5B2;
+	margin-right: 31px;
+	margin-top: 10px;
+}
+.comment_form input:hover{
+	background: #808080;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
 }
 
 .content ul, .content ol { 
