@@ -68,7 +68,10 @@ a:hover, a:active, a:focus {
 	height: 50px;
 }
 .logo dd{
-	
+	padding-left: 20px;
+	font-size: 20px;
+	padding-top: 19px;
+	color: #5D5655;
 }
 
 .sidebar_button{
@@ -238,19 +241,22 @@ a:hover, a:active, a:focus {
 	margin-bottom:0px;
 }
 
-.comments{
+.comment{
 	background: #f0f0f0;
 	margin-top: 25px;
+	height: 200px;
+}
+.comment_text{
+
 }
 
-/* ~~ 此分组的选择器为 .content 区域中的列表提供了空间 ~~ */
 .content ul, .content ol { 
 	padding: 0 0 0 40px; 
 }
 
 
 
-/* ~~ 其它浮动/清除类 ~~ */
+
 .fltrt { 
 	float: right;
 	margin-left: 8px;
