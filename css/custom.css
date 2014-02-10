@@ -34,6 +34,8 @@ a {
     color: #e74c3c;
 }
 
+
+
 /* HEADER
 ====================================== */
 #nav-header {
@@ -334,7 +336,7 @@ a {
 #deal-list >.item-wrapper {
     position: absolute;
     float: left;
-    width: 238px;
+    width: 238px; /* js reset */
     border: 1px solid rgba(0,0,0,0.15);
     overflow: hidden;
     z-index: 2;
@@ -414,6 +416,16 @@ a {
     bottom: 0;
     background-color: rgba(0,0,0,0.35);
 }
+#deal-list > .item-wrapper > .list-item li {
+    display: inline-block;
+    margin-left: 10px;
+}
+#deal-list > .item-wrapper > .list-item li:first-child {
+    margin-left: 0;
+}
+#deal-list > .item-wrapper > .list-item a {
+    color: #343339;
+}
 #deal-list > .item-wrapper > .list-item .btn {
     background-color: white;
     padding: 3px 6px;
@@ -422,14 +434,49 @@ a {
     display: inline-block;
     font-weight: bold;
     vertical-align: middle;
-    margin-left: 10px;
-}
-#deal-list > .item-wrapper > .list-item .btn:first-child {
-    margin-left: 0;
 }
 #deal-list > .item-wrapper > .list-item .btn-text {
     font-size: 20px;
     vertical-align: middle;
+}
+/* --- program list --- */
+#program-list {
+    width: 760px;
+    margin: 10px auto;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+#program-list > .item-wrapper {
+    border: 1px solid #CACACA;
+    position: absolute;
+}
+#program-list > .item-wrapper > .list-item {
+    position: relative;
+    background-color: white;
+}
+#program-list > .item-wrapper > .list-item > .item-image {
+    width: 180px;
+    height: 160px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#program-list > .item-wrapper > .list-item > .item-image > img {
+    display: block;
+}
+#program-list > .item-wrapper > .list-item > .item-name {
+    background-color: #F1F2F3;
+    text-align: center;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+}
+#program-list > .item-wrapper > .list-item > .item-name > h3 {
+    margin: 8px 0;
+}
+#program-list > .item-wrapper > .list-item > .item-option {
+    text-align: center;
+    background-color: #169AA3;
+    color: white;
 }
 /* FOOTER
 ====================================== */
