@@ -1,0 +1,37 @@
+/* FOOTER
+====================================== */
+#footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: @footer-color;
+    color: white;
+    z-index: 100;
+    padding: 10px 0;
+    font-size: 90%;
+    > .left {
+        margin-left: 50px;
+         > p {
+            margin: 0;
+        }
+    }
+    > .right {
+        margin-right: 50px;
+    }
+    .menu-help {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        > li {
+            display: inline-block;
+            > a {
+                color: white;
+                text-decoration: none;
+                padding: 0 5px;
+                &:hover {
+                    color: @gold;
+                }
+            }
+        }
+    }
+}
