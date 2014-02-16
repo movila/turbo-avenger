@@ -7,6 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link rel="stylesheet" href="http://i.icomoon.io/public/temp/18c9c5df74/Fannaby/style.css">
+	
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet/less" type="text/css" href="less/fannaby.less">
         <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.6.2/less.min.js"></script>
@@ -29,10 +31,35 @@
                 </ul>
             </div>
             <div class="right">
-                <ul class="menu">
+                <ul class="menu" style="display:none;">
                     <li><a href="/sign-up">Sign Up</a>&nbsp;/&nbsp;</li>
                     <li><a href="/sign-in">Sign In</a></li>
                 </ul>
+                
+                <div id="notification" class="left">
+                    <a href="/">
+                        <span class="notification-icon icon-bell"></span>
+                        <span class="badge count">12</span>
+                    </a>
+                </div>
+                
+                <div id="user">
+                    <a href="/user">
+                        <span class="user-icon left">
+                            <img src="img/Fabercastell_shark.jpg">
+                        </span>
+                        <span class="user-name">Jenny</span>
+                    </a>
+
+                    <div class="user-menu">
+                        <ul class="list">
+                            <li><a href="/profile">Profile</a></li>
+                            <li><a href="/setting">Setting</a></li>
+                            <li><a href="/help">Help</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </header>
         
