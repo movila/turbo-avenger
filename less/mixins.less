@@ -1,0 +1,9 @@
+.color-switch (@c) when (saturation(@c) >= 15%) and (lightness(@c) <= 85%) {
+	color: @white;
+}
+.color-switch (@c) when (saturation(@c) < 15%) and (lightness(@c) > 85%) {
+	color: @black;
+}
+.color-switch (@c) {
+	background-color: @c;
+}

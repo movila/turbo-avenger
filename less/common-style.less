@@ -1,0 +1,91 @@
+/* Common Rules
+============================================== */
+html, body {
+    font: 10.5pt/21px 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    background-color: @default-ground-color;
+    color: @default-color;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+.left {
+    float: left;
+    display: inline-block;
+}
+.right {
+    float: right;
+    display: inline-block;
+}
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 1em;
+    vertical-align: middle;
+    background-color: @badge-color;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+a {
+    color: @default-link-color;
+}
+.list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.clearfix::before,
+.clearfix::after {
+    content: " "; 
+    display: table; 
+}
+.clearfix::after {
+    clear: both;
+}
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+.btn {
+	font-size: 14px;
+	padding: 7px 32px;
+	white-space: nowrap;
+	border: none;
+    background-color: @default-button-color;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    &:hover {
+		background-color: darken(@default-button-color, 3%);
+	}
+    &[disabled] {
+        cursor: not-allowed;
+        pointer-events: none;
+        background-color: @button-disabled;
+        border-color: @border-color;
+        opacity: 1; // iOS fix for unreadable disabled content
+    }
+}
+input[type=text], input[type=password], textarea {
+	font-size: 14px;
+	white-space: nowrap;
+	color: #333;
+	padding: 9px 12px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	background-color: white;
+	border: 1px solid @border-color;
+	display: block;
+	&:focus {
+	}
+}

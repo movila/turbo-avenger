@@ -1,0 +1,74 @@
+#main {
+	width: 740px;
+	> form {
+		padding: 20px;
+		border: 1px solid @border-color;
+		> fieldset {
+			border-top: none;
+			border-right: none;
+			border-bottom: 1px solid @border-color;
+			border-left: none;
+			margin-bottom: 20px;
+			> .form-inline {
+				display: block;
+				margin: 10px 0;
+				label, input, button, div {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	> .setting-form {
+		.form-inline {
+			.right {
+				width: 480px;
+			}
+			.photo-label { vertical-align: top; }
+			.photo {
+				width: 70px;
+				height: 70px;
+				overflow: hidden;
+				border-radius: 50px;
+				border: 1px solid @border-color;
+				> img {
+					height: 70px;
+				}
+			}
+			.file-btn {
+				margin-left: 20px;
+				margin-top: -60px;
+			}
+			input[type=text], input[type=password], textarea {
+				width: 280px;
+				margin-right: 20px;
+			}
+		}
+		> .btn-area button {
+			margin-left: -10px; // fix form input
+		}
+	}
+	
+}
+#sidebar {
+	width: 280px;
+	> .settings-panel {
+		list-style: none;
+		padding: 0;
+		border: 1px solid @border-color;
+		> li > a {
+			display: block;
+			background-color: white;
+			padding: 10px 20px;
+			width: 238px;
+			text-decoration: none;
+			font-weight: bold;
+			//box-shadow: @shadow;
+			&:hover {
+				background-color: @light;
+			}
+			&.active {
+				background-color: @light;
+			}
+		} 
+	}
+}

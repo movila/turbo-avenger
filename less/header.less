@@ -1,0 +1,149 @@
+/* HEADER
+====================================== */
+#nav-header {
+    position: fixed;
+    height: 68px;
+    background-color: white;
+    box-shadow: @shadow;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    > .left {
+        margin-left: 50px;
+        > #site-logo {
+            float: left;
+            width: 180px;
+            height: 40px;
+            overflow: hidden;
+            margin: 14px 20px 0 0;
+            > h1 {
+                margin: 0;
+                font-size: 32px;
+                line-height: 40px;
+                > a {
+                    text-decoration: none;
+                    color: darken(@menu-color, 30%);
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+    > .right {
+        margin-right: 50px;
+    }
+    /**
+     * General Navigation Module
+     */
+    .menu {
+        list-style: none;
+        float: left;
+        padding: 0;
+        margin: 0;
+        > li {
+            float: left;
+            height: 68px;
+            position: relative;
+            text-transform: uppercase;
+            > a {
+                color: @menu-color;
+                font-size: 1em;
+                font-weight: bold;
+                line-height: 64px;
+                text-decoration: none;
+                &:hover {
+                    color: darken(@menu-color, 30%);
+                }
+            }
+        }
+        > .menu-items {
+            border-right: 1px solid @border-color;
+            > a {
+                display: block;
+                padding: 0 25px;
+                vertical-align: middle;
+                &.active {
+                    color:  darken(@menu-color, 30%);
+                    border-bottom: 4px solid darken(@menu-color, 30%);
+                }
+            }
+        }
+    }
+}
+
+
+/**
+ * Notification & User (logined) Menu Module
+ */
+#notification {
+    margin-top: 30px;
+    margin-right: 30px;
+    display: inline-block;
+    > a {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        > .notification-icon {
+            font-size: 22px;
+        }
+        > .count {
+            font-size: 10px;
+            font-weight: normal;
+            position: absolute;
+            left: -7px;
+            top: -10px;
+            z-index: 110;
+        }
+    }
+}
+
+#user {
+    display: inline-block;
+    position: relative;
+    height: 68px;
+    > a {
+        border-radius: 5px;
+        display: block;
+        margin-top: 10px;
+        padding-right: 10px;
+        text-decoration: none;
+        > .user-icon {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            overflow: hidden;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        > .user-name {
+            display: inline-block;
+            line-height: 48px;
+            font-weight: bold;
+        }
+        &:hover {
+            background-color: @white;
+        }
+    }
+    > .user-menu {
+        display: none;
+        position: absolute;
+        background-color: @true-white;
+        z-index: 20;
+        min-width: 120px;
+        top: 68px;
+        left: 0;
+        //border: 1px solid @border-color;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+        > ul > li {
+            > a {
+                display: block;
+                text-decoration: none;
+                line-height: 30px;
+                padding-left: 10px;
+                &:hover {
+                    background-color: @default-button-color;
+                    color: @white;
+                }
+            }
+        }
+    }
+}

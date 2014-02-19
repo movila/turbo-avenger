@@ -1,0 +1,62 @@
+/**
+ * Loyalty Program Page
+ * dependency: [pop-up.less, variables.less, mixins.less ]
+ * sub-themes: [header.less, footer.less, ]
+============================================== */
+body {
+    // overflow: hidden; // DEBUG: when popup showed up
+}
+#wrapper {
+    width: 1080px;
+    margin: 90px auto;
+    position: relative;
+}
+#content {
+    position: relative;
+    width: 100%;
+    background-color: fade(@true-white, 0%); // DEBUG
+    @import "settings.less";
+    > .programlist:extend(#popup > .popup-module > .popup-content > .programlist all) {
+        @pop-content-width: 1080px; // #wrapper width
+        @cols: 4;
+        width: @pop-content-width;
+        background-color: fade(@true-white, 0%); // DEBUG
+        position: relative;
+        > .program {
+            width: 255px;
+            margin: 0;
+            /**  
+             * using JS to make pinboard layout
+             *
+            width: (@pop-content-width - 20*(@cols - 1) - 2*@cols) / @cols; // (container - margin - border) / #cols
+            &:nth-child(3n+1) { // override
+                margin-left: 20px;
+            }
+            &:nth-child(@{cols}n+1) {
+                margin-left: 0;
+            }
+            */
+            > .status {
+                //display: none;
+                text-align: center;
+                > .linked {
+                    display: block;
+                    text-align: center;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    //line-height: 21px;
+                    padding: 7px 32px;
+                    //margin: 10px auto;
+                    //border-left: 7px solid @decor-border;
+                    //border-right: 7px solid @decor-border;
+                    background-color: @default-button-color;
+                    color: @yellow;
+                    margin-bottom: 15px;
+                }
+                > button {
+                    margin: 0 auto 15px;
+                }
+            }
+        }
+    }
+}
