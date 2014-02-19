@@ -1,0 +1,117 @@
+.mainContainer{
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	height: 100%;
+}
+.mainContainer > .centerPanel{ 
+	/* vertical and horizontal align centre*/
+	position: absolute;
+	width: 830px;
+	height:460px;
+	top: 50%;
+	margin-top: -220px;
+	left: 50%;
+	margin-left: -415px;
+	background: @true-white;
+	border: 1px solid @silver;
+}
+
+.mainContainer > .centerPanel > .pHeader{
+	border-bottom: none;
+	position: relative;
+}
+.mainContainer > .centerPanel > .pHeader > h1{
+	font-size: 20px;
+	padding: 50px 60px 40px 60px;
+	margin: 0;
+}
+.mainContainer > .centerPanel > .container > .loginForm{
+	height: 200px;
+	width: 322px;
+	float: left;
+	margin-left: 60px;
+	position: relative;
+}
+.mainContainer > .centerPanel > .container > .loginForm > form > input{
+	width: 300px;
+	line-height: 45px;
+	margin-bottom: 15px;
+	padding: 0 0 0 20px;
+	border: 1px solid #696969;
+	color: #696969;
+}
+
+.mainContainer > .centerPanel > .container > .loginForm > form >.submit{
+	width: 322px;
+	font-weight: bold;
+	line-height: 45px;
+	padding: 0;
+}
+
+.mainContainer > .centerPanel > .container > .loginForm > a{
+	margin-top:10px;
+	display: block;
+}
+
+.mainContainer > .centerPanel > .container > .orLine {
+	margin: -22px 40px 0 40px;
+	float: left;
+	font-weight: bold;
+}
+.mainContainer > .centerPanel > .container > .orLine:before{
+	content:"";
+	width: 1px;
+	height: 5em;
+	margin: 1em auto;
+	background: #898989;
+	display: block;
+}
+.mainContainer > .centerPanel > .container > .orLine:after{
+	content: "";
+	width: 1px;
+	height: 5em;
+	margin: 1em auto;
+	background: #898989;
+	display: block;
+}
+.mainContainer > .centerPanel > .container > .socialLogin> a{
+	line-height: 47px;
+	width: 280px;
+	float: left;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 0;
+	text-align: left;
+	margin-bottom: 15px;
+}
+.mainContainer > .centerPanel > .container > .socialLogin> a >img{
+	width:40px;
+	height:40px;
+	float: left;
+	padding-right: 15px;
+	margin: 4px 0 0 38px;
+}
+
+.mainContainer > .centerPanel > .pFooter{
+	text-align: center;
+	margin-top: 80px;
+}
+.mainContainer > .centerPanel > .pFooter >h1{
+	font-size: 18px;
+	font-weight: normal;
+	color: #595959;
+	display: inline;
+}
+.mainContainer > .centerPanel > .pFooter >a{
+	text-decoration: none;
+	color: #393939;
+	font-weight: bold;
+	font-size: 18px;
+	padding: 4px;
+}
+.mainContainer > .centerPanel > .pFooter >a:hover{
+	background-color: @light-blue;
+	border-radius: 8px;
+	color: #fff
+}

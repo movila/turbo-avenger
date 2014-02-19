@@ -1,0 +1,127 @@
+#preference-mainContainer{
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	height: 100%;
+	
+    > .centerPanel{ 
+		/* vertical and horizontal align centre*/
+		position: absolute;
+		width: 830px;
+		height:600px;
+		top: 50%;
+		margin-top: -300px;
+		left: 50%;
+		margin-left: -415px;
+		background: @true-white;
+		border: 1px solid @silver;
+        > .pHeader{
+            font-size:17px;
+            font-weight: bold;
+            > a{
+                text-decoration: none;
+                float:right;
+                padding: 6px;
+                color:#393939;
+                margin: 15px 25px 5px 0;
+                &:hover{
+                    background-color: @light-blue;
+                    border-radius: 8px;
+                    color: #fff
+                    
+                }
+            }
+            
+		}
+        
+		> .checkBox{
+            border-top: 1px solid black;
+            > h1{
+                font-size: 22px;
+                font-weight: bold;
+                margin: 25px 0 25px 20px;
+            }
+            
+            > form{
+                #selection-wrapper {
+                    > .rightUl{
+                        float:right;
+                        margin-right:110px;
+                    }
+                    > .leftUl{
+                        float:left;
+                        margin-left:55px;
+                    }
+                    > .leftUl, .rightUl{
+                        > .options {
+                            line-height: 60px;
+                            border-bottom: 1px solid white;
+                            position: relative;
+                            padding: 0 20px;
+                            > label { 
+                                > .check-mark {
+                                    cursor: pointer;
+                                    //position: absolute;
+                                    display: inline-block;
+                                    width: 30px;
+                                    height: 30px;
+                                    right: 20px;
+                                    top: 16px;
+                                    border-radius: 3px;
+                                    background-color: @white;
+                                    border: 1px solid #888;
+                                    vertical-align: middle;
+                                    
+                                    &:after {
+                                        opacity: 0;
+                                        content: '';
+                                        position: absolute;
+                                        width: 18px;
+                                        height: 8px;
+                                        background: transparent;
+                                        top: 16px;
+                                        left: 40px;
+                                        border: 5px solid #393939;
+                                        border-top: none;
+                                        border-right: none;
+
+                                        -webkit-transform: rotate(-45deg);
+                                        -moz-transform: rotate(-45deg);
+                                        -o-transform: rotate(-45deg);
+                                        -ms-transform: rotate(-45deg);
+                                        transform: rotate(-45deg);
+                                    }
+                                    
+                                }
+                                
+                                > .option-label{
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    color: #595959;
+                                }
+                            }
+                        }
+                    }
+                }
+                #selection-wrapper input[type=checkbox]:checked + .check-mark:after {
+                    opacity: 1;
+                }
+                #selection-wrapper input[type=checkbox] {
+                    visibility: hidden;
+                }
+            
+    
+                
+                
+                
+                > div > .nextBtn {
+                    //float: left;
+                    line-height: 30px;
+                    text-decoration: none;
+                    border-radius: 21px;
+                    margin: 0 auto;
+                }
+			}
+        }
+	}
+}

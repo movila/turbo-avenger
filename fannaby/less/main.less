@@ -1,0 +1,29 @@
+/* Content
+============================================== */
+body {
+    // overflow: hidden; // DEBUG: when popup showed up
+}
+#wrapper {
+    width: 1080px;
+    margin: 90px auto;
+    position: relative;
+}
+#content {
+	position: relative;
+	width: 100%;
+	background-color: @true-white;
+	> .programlist:extend(#popup > .popup-module > .popup-content > .programlist all) {
+		@pop-content-width: 1080px; // #wrapper width
+		@cols: 4;
+		width: @pop-content-width;
+		> .program {
+			width: (@pop-content-width - 20*(@cols - 1) - 2*@cols) / @cols; // (container - margin - border) / #cols
+            &:nth-child(3n+1) { // override
+                margin-left: 20px;
+            }
+            &:nth-child(@{cols}n+1) {
+                margin-left: 0;
+            }
+		}
+	}
+}

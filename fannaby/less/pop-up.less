@@ -1,0 +1,324 @@
+/* Pop-up
+=============================================== */
+#popup {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
+    z-index: 100;
+    display: block;
+    &.closable {
+        cursor: pointer;
+    }
+    > .popup-module {
+        border-radius: 5px;
+        background-color: @default-ground-color;
+        margin: 90px auto;
+        width: @popup-width;
+        cursor: auto;
+        position: relative;
+        > .close {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 21px;
+            display: block;
+            .color-switch(@popup-close-color);
+            padding: 5px 12px;
+            position: absolute;
+            top: 0;
+            right: 20px;
+            &:hover {
+                background-color: darken(@popup-close-color, 5%);
+            }
+        }
+        > .popup-header {
+            border-radius: 5px 5px 0 0;
+            .color-switch(@sea-weed);
+            text-align: center;
+            text-transform: uppercase;
+            padding: 5px 0;
+            border-bottom: 1px solid @border-color;
+            
+            >.space{
+                padding:20px 0 20px 0;
+            }
+        }
+        > .popup-section {
+            border-bottom: 1px solid @border-color;
+        }
+        /** 
+         * module 1: loyalty program header cover;
+         */
+        > .program-cover {
+           overflow: hidden;
+           padding: 20px 0;
+           background-color: @light-white;
+           > .program-icon  {
+                background-color: @true-white;
+                border: 1px solid @border-color;
+                padding: 10px;
+                margin: 0 40px;
+                > img {
+                    width: 100px;
+                }
+           }
+           > .options {
+            margin-top: 20px;
+                > li {
+                    margin-bottom: 10px;
+                }
+           }
+        }
+        /** 
+         * module 2: action-bar;
+         */
+        > .popup-actionbar {
+            > .steplist {
+                @num-of-steps: 2;
+                > .step {
+                    display: inline-block;
+                    font-size: 1.2em;
+                    line-height: 2.5em;
+                    width: (@popup-width - 10*2)/@num-of-steps - 2; // column width = container/#cols - border - padding 
+                    padding-left: 10px;
+                    position: relative;
+                    border-right: 1px solid #CCC;
+                    margin-left: -3px; // fix mis-locaitoned background color
+                    &.active {
+                        background-color: @light-white;
+                    }
+                    > .number {
+                        font-weight: bold;
+                        margin-right: 5px;
+                    }
+                    &:last-child {
+                        border-right: none;
+                    }
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        > .popup-content {
+            padding: 20px 0;
+            /** 
+             * module 3: main content, use all the default setting for HTML elements;
+             * 
+             * note: this should be the setting of defult HTML render.
+             */
+            > .content {
+                padding: 0 40px;
+                > h1 {
+                    color: @true-black;
+                    margin-bottom: 1.5em;
+                }
+            }
+
+            /** 
+             * module 0: list of loyalty program, debug;
+             * 
+             * note: move this css into a seperate file, because loyalty program page use this too.
+             */
+            > .programlist {
+                @cols: 3;
+                @program-height: 145px;
+                @pop-content-margin: 60px; // DEBUG: scaled program list width
+                @pop-content-width: @popup-width - @pop-content-margin*2; // container - margin
+                width: @pop-content-width; 
+                margin: 0 auto;
+                background-color: white; // DEBUG: test-color
+                > .program {
+                    float: left;
+                    border: 1px solid @border-color;
+                    margin-left: 20px;
+                    width: (@pop-content-width - 20*(@cols - 1) - 2*@cols) / @cols; // (container - margin - border) / #cols
+                    position: relative; // DEBUG: useful when content have absolute
+                    margin-bottom: 20px;
+                    &:hover {
+                        //background-color: @light-white;
+                        border-color: @default-button-color;
+                    }
+                    &:nth-child(3n+1) {
+                        margin-left: 0;
+                    }
+                    > .program-icon {
+                        width: 100%;
+                        height: @program-height;
+                        background-color: white;
+                    }
+                    > h3 {
+                        text-align: center;
+                    }
+                }
+            }
+
+            /** 
+             * module 5: link program moule, debug;
+             * 
+             * note: move this css into a seperate file, because loyalty program page use this too.
+             */
+            > .program-connect-module {
+                width: 720px;
+                margin: 0 auto;
+                > header {
+                    margin-bottom: 20px;
+                }
+                .notes {
+                    color: @grey;
+                }
+                a {
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                > form {
+                    border: 1px solid @border-color;
+                    margin-bottom: 20px;
+                    > .form-group {
+                        padding: 20px;
+                        > .form-inline {
+                            margin-bottom: 10px;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                    > .login {
+                        background-color: @light-white;
+                        > .program-icon {
+                            background-color: @true-white;
+                            border: 1px solid @border-color;
+                            padding: 10px;
+                            > img {
+                                width: 100px;
+                            }
+                        }
+                        > .form-control {
+                            width: 500px;
+                            > h3 {
+                                margin-top: 0;
+                            }
+                            > input {
+                                margin-bottom: 10px;
+                                width: 460px;
+                            }
+                        }
+                    }
+                    > .center {
+                        text-align: center; 
+                    }  
+                }
+            }
+
+            /* Link new programe, Processing page by cloud*/
+            > .processing{
+                
+                background-color: @true-white;
+                margin: 0;
+                margin-top: -20px;
+                border-radius: 5px;
+                margin-bottom: -20px;
+                display:block;
+                              
+                > ul{
+                    margin: 0 auto;
+                    padding: 0;
+                    width: 80%;
+                    display: block;
+                    list-style-type: none;
+                    > li {
+                        display: inline-block;
+                        padding: 70px 30px 50px 30px;
+                        > .loading{
+                            margin: 0px 0px 12px 0px;
+                        }
+                        > .fannabyLogo{
+                            margin-left: 150px;
+                        }
+                    }
+                }
+                
+                > h1{
+                    font-size:23px;
+                    margin:0 auto;
+                    text-align: center;
+                    font-weight: bold;
+                }
+                
+                > p{
+                    font-size:18px;
+                    text-align: center;
+                    color: #777;
+                    margin:0;
+                    padding:0;
+                    padding-top: 40px;
+                    padding-bottom: 70px;
+                }
+                
+                
+                
+            }
+            
+            > .error{
+                background-color: @true-white;
+                margin: 0;
+                margin-top: -20px;
+                border-radius: 5px;
+                margin-bottom: -20px;
+                display:none;
+                
+                > .close {
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 21px;
+                    display: block;
+                    .color-switch(@popup-close-color);
+                    padding: 5px 12px;
+                    position: absolute;
+                    top: 0;
+                    right: 20px;
+                    &:hover {
+                        background-color: darken(@popup-close-color, 5%);
+                    }
+                }
+                > img{
+                    margin: 0 auto;
+                    display: block;
+                    margin-top: 60px;
+                    margin-bottom: 40px;
+                }
+                > h1{
+                    font-size:23px;
+                    margin:0 auto;
+                    text-align: center;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                }
+                > p{
+                    font-size:18px;
+                    text-align: center;
+                    color: #777;
+                    margin:0;
+                    padding:0;
+                    padding-top: 10px;
+                }
+                > .report{
+                    line-height: 30px;
+                    border-radius: 21px;
+                    margin: 0 auto;
+                    margin-top: 50px;
+                    margin-bottom: 40px;
+                }
+                > .lastLine{
+                    margin-bottom: 40px;
+                }
+            }
+
+        }
+    }
+}

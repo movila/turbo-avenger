@@ -1,0 +1,89 @@
+#complete-mainContainer{
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	height: 100%;
+	
+    > .centerPanel{ 
+		/* vertical and horizontal align centre*/
+		position: absolute;
+		width: 830px;
+		height:460px;
+		top: 50%;
+		margin-top: -220px;
+		left: 50%;
+		margin-left: -415px;
+		background: @true-white;
+		border: 1px solid @silver;
+        > .pHeader{
+            margin-top: 60px;
+            > img{
+                opacity:0.6;
+                margin: 0 auto;
+                display: block;
+            }  
+		}
+        
+        > .pBody{
+            text-align: center;
+            padding: 0 60px 0 60px;
+            
+            > h1 {
+                font-size: 24px;
+				padding: 40px 0 30px 0;
+				margin: 0;
+				color: #000;
+            }
+            
+            > p{
+                font-size: 16px;
+				margin: 0;
+				font-weight: bold;
+				color: #595959;
+            }
+        }
+        
+        > .pFooter{
+			margin-top: 60px;
+			
+			> .link {
+				//float: left;
+				width: 30%;
+				line-height: 30px;
+				text-decoration: none;
+				border-radius: 20px;
+				margin: 0 auto;
+			}
+			> .later{
+				//float: right;
+                margin: 0 auto;
+				width: 30%;
+				line-height: 30px;
+				text-decoration: none;
+				border-radius: 20px;
+				margin-top: 20px;
+				font-size: 14px;
+				padding: 7px 32px;
+				white-space: nowrap;
+				border: none;
+				background-color: #888888;
+				color: white;
+				cursor: pointer;
+				display: block;
+				font-weight: normal;
+				text-align: center;
+				vertical-align: middle;
+				&:hover {
+					background-color: darken(#888888, 3%);
+				}
+				&[disabled] {
+					cursor: not-allowed;
+					pointer-events: none;
+					background-color: @button-disabled;
+					border-color: @border-color;
+					opacity: 1; // iOS fix for unreadable disabled content
+				}
+			}
+		}
+	}
+}
