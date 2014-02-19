@@ -11,10 +11,10 @@
 
 
 //chemin jusqu'au fichier de conf de WampServer
-$wampConfFile = '../wampmanager.conf';
+$wampConfFile = 'C:/wamp/wampmanager.conf';
 
 //chemin jusqu'aux fichiers alias
-$aliasDir = '../alias/';
+$aliasDir = 'C:/wamp/alias/';
 
 
 
