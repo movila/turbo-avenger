@@ -7,23 +7,23 @@
     > .centerPanel{ 
 		/* vertical and horizontal align centre*/
 		position: absolute;
-		width: 830px;
-		height:570px;
-		top: 50%;
-		margin-top: -271px;
-		left: 50%;
-		margin-left: -415px;
+		width: 700px;
+        height: 470px;
+        top: 50%;
+        margin-top: -222px;
+        left: 50%;
+        margin-left: -350px;
 		background: @true-white;
 		border: 1px solid @silver;
         > .pHeader{
-            font-size:17px;
+            font-size:15px;
             font-weight: bold;
             > a{
                 text-decoration: none;
                 float:right;
-                padding: 6px;
+                padding: 3px;
                 color:#393939;
-                margin: 5px 20px 5px 0;
+                margin: 3px 20px 3px 0;
                 &:hover{
                     background-color: @light-blue;
                     border-radius: 8px;
@@ -37,36 +37,36 @@
 		> .checkBox{
             border-top: 1px solid black;
             > h1{
-                font-size: 22px;
+                font-size: 20px;
                 font-weight: bold;
-                margin: 30px 0 20px 40px;
+                margin: 20px 0 0px 40px;
             }
             
             > form{
                 #selection-wrapper {
                     > .rightUl{
                         position: absolute;
-                        margin-left:400px;
+                        margin-left:360px;
                     }
                     > .leftUl{
                         float:left;
-                        margin-left:50px;
+                        margin-left:20px;
                     }
                     > .leftUl, .rightUl{
                         > .options {
-                            line-height: 55px;
+                            line-height: 50px;
                             border-bottom: 1px solid white;
                             position: relative;
-                            padding: 0 20px;
+                            //padding: 0 10px;
                             > label { 
                                 > .check-mark {
                                     cursor: pointer;
                                     //position: absolute;
                                     display: inline-block;
-                                    width: 30px;
-                                    height: 30px;
-                                    right: 20px;
-                                    top: 16px;
+                                    width: 25px;
+                                    height: 25px;
+                                    //right: 20px;
+                                    //top: 16px;
                                     border-radius: 3px;
                                     background-color: @white;
                                     border: 1px solid #888;
@@ -76,11 +76,11 @@
                                         opacity: 0;
                                         content: '';
                                         position: absolute;
-                                        width: 18px;
-                                        height: 8px;
+                                        width: 16px;
+                                        height: 6px;
                                         background: transparent;
                                         top: 20px;
-                                        left: 40px;
+                                        left: 20px;
                                         border: 5px solid #393939;
                                         border-top: none;
                                         border-right: none;
@@ -95,7 +95,7 @@
                                 }
                                 
                                 > .option-label{
-                                    font-size: 18px;
+                                    font-size: 16px;
                                     font-weight: bold;
                                     color: #595959;
                                 }
@@ -114,13 +114,15 @@
                 
                 
                 
-                > div > .nextBtn {
-                    //float: left;
-                    line-height: 30px;
-                    text-decoration: none;
-                    border-radius: 21px;
-                    margin: 0 auto;
-                    margin-top: 20px;
+                > .sub {
+                    border-top: 1px solid black;
+                    > .nextBtn {
+                        line-height: 20px;
+                        text-decoration: none;
+                        border-radius: 20px;
+                        margin: 0 auto;
+                        margin-top: 11px;
+                    }
                 }
 			}
         }
