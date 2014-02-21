@@ -150,11 +150,13 @@ define(['jquery'], function($){
 
                     var verticleAlign = function(){
                         var newImgHi = hor * imgH / imgW;
+                        console.log('Verticle Align: new-'+newImgHi);
                         $($img).css({width:hor, marginLeft:buffer, marginTop:(outH-newImgHi)/2});
                     };
 
                     var horizontalAlign = function(){
                         var newImgWi = ver * imgW / imgH;
+                        console.log('Horizontal Align: new-'+newImgWi);
                         $($img).css({height:ver, marginLeft:(outW-newImgWi)/2, marginTop:buffer});
                     };
 

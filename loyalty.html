@@ -26,8 +26,8 @@
                 </div>
                 <ul class="menu">
                     <li class="menu-items"><a href="/">Account Manager</a></li>
-                    <li class="menu-items"><a href="/saved_deals.html">Reward Map<span class="badge">3</span></a></li>
-                    <li class="menu-items"><a class="active" href="/loyalty-programs">Loyalty Programs</a></li>
+                    <li class="menu-items"><a href="reward.html">Reward Map<span class="badge">3</span></a></li>
+                    <li class="menu-items"><a class="active" href="loyalty.html">Loyalty Programs</a></li>
                 </ul>
             </div>
             <div class="right">
@@ -53,7 +53,7 @@
 
                     <div class="user-menu">
                         <ul class="list">
-                            <li><a href="/profile">Profile</a></li>
+                            <li><a href="profile.html">Profile</a></li>
                             <li><a href="/setting">Setting</a></li>
                             <li><a href="/help">Help</a></li>
                             <li><a href="/logout">Logout</a></li>
@@ -189,7 +189,7 @@
 
         <!-- POPUP Start -->
         <div id="popup" class="popup-wrapper closable overlay">
-            <article class="popup-module program-module" id="module-1">
+            <article class="popup-module program-module" id="popup-1">
                 <a class="close" href="#">X</a>
 
                 <header class="popup-header">
@@ -201,7 +201,7 @@
                         <img src="img/air-miles.jpg" alt="Loyalty program">
                     </div>
                     <ul class="left list options">
-                        <li><a class="btn light official-web-btn">official website</a></li>
+                        <li><a href="https://www.airmiles.ca" class="btn light official-web-btn">official website</a></li>
                         <li><a class="btn light link-account-btn">+ link my account</a></li>
                     </ul>
                 </section>
@@ -228,9 +228,9 @@
                 </div>
 
             </article>
+            <!-- popup-1 END -->
 
-
-            <article class="popup-module" id="module-2" style="display:none;">
+            <article class="popup-module" id="popup-2" style="display:none;">
                     <a class="close" href="">X</a>
 
                     <header class="popup-header">
@@ -254,22 +254,28 @@
                         <ul class="list programlist clearfix">
                             <li class="program">
                                 <div class="program-icon">
-                                    <img alt="" src="">
+                                    <img alt="" src="img/aeroplan.jpg">
                                 </div>
                                 <h3>Aeroplan</h3>
                             </li>
                             <!-- list of programs -->
                             <li class="program">
                                 <div class="program-icon">
-                                    <img alt="" src="">
+                                    <img alt="" src="img/air-miles.jpg">
                                 </div>
-                                <h3>Air Mile</h3>
+                                <h3>Air Miles</h3>
                             </li>
                             <li class="program">
                                 <div class="program-icon">
-                                    <img alt="" src="">
+                                    <img alt="" src="img/scene.jpg">
                                 </div>
                                 <h3>Scene</h3>
+                            </li>
+                            <li class="program">
+                                <div class="program-icon">
+                                    <img alt="" src="img/petro-canada.jpg">
+                                </div>
+                                <h3>Petro Canada</h3>
                             </li>
                             <li class="program">
                                 <div class="program-icon">
@@ -281,28 +287,92 @@
                                 <div class="program-icon">
                                     <img alt="" src="">
                                 </div>
-                                <h3>Aeroplan</h3>
+                                <h3>Blablabla</h3>
                             </li>
                             <li class="program">
                                 <div class="program-icon">
                                     <img alt="" src="">
                                 </div>
-                                <h3>Scene</h3>
+                                <h3>Some Others</h3>
                             </li>
                             <li class="program">
                                 <div class="program-icon">
                                     <img alt="" src="">
                                 </div>
-                                <h3>Air Mile</h3>
-                            </li>
-                            <li class="program">
-                                <div class="program-icon">
-                                    <img alt="" src="">
-                                </div>
-                                <h3>AOLEEEx</h3>
+                                <h3>YOLO</h3>
                             </li>
                             <!--/END list of programs -->
                         </ul>
+                    </div>
+
+                </article>
+                <!-- popup-2 END -->
+
+                <article class="popup-module" id="popup-3" style="display:none;">
+                    <a class="close" href="">X</a>
+
+                    <header class="popup-header">
+                        <h2>Link New Account</h2>
+                    </header>
+
+                    <section class="popup-actionbar popup-section">
+                        <ol class="list steplist">
+                            <li class="step active">
+                                <span class="number">Step 1</span>
+                                Select Your Loyalty Program
+                            </li>
+                            <li class="step active">
+                                <span class="number">Step 2</span>
+                                Login To Your Account
+                            </li>
+                        </ol>
+                    </section>
+
+                    <div class="popup-content" role="main">
+
+                        <div class="program-connect-module">
+                            <header>Login here and Fannaby will help you manage your account</header>
+                            <form method="post" action="">
+                                <div class="form-group clearfix login"> 
+                                    <div class="program-icon left">
+                                        <img src="img/air-miles.jpg" >
+                                    </div>
+                                    <div class="right form-control">
+                                        <h3>Air Miles Login</h3>
+                                        <input placeholder="Air Miles Number" type="text" name="prog-number" id="prog-number">
+                                        <input placeholder="Password" type="password" name="prog-number" id="prog-number">
+                                        <a href="/forgot">Forgot Password</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group form-control center">
+                                    <div class="form-inline">
+                                        <input type="checkbox" id="agree-chkbox">
+                                        <label for="agree-chkbox">
+                                            I agree to authorize Fannaby the access to my <em>Air Miles</em> account.
+                                        </label>
+                                    </div>
+
+                                    <div class="form-inline submit"> 
+                                        <button class="btn" type="submit">Authorize Access</button>
+                                    </div>
+
+                                    <div class="form-inline notes">
+                                        Not a member yet? Sign up at 
+                                        <a href="https://www.airmiles.ca">
+                                            <span class="icon-earth"></span> airmiles.ca
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <small class="notes">
+                                <span class="icon-lock"></span>
+                                Your account information is secured by Fannaby <a href="/terms">Terms of
+                                Service</a> and <a href="/privacy">Privacy Policy</a>
+                            </small>
+                        </div>
+
                     </div>
 
                 </article>

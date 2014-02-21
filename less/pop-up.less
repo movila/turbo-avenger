@@ -126,12 +126,13 @@
                 @pop-content-width: @popup-width - @pop-content-margin*2; // container - margin
                 width: @pop-content-width; 
                 margin: 0 auto;
-                background-color: white; // DEBUG: test-color
+                //background-color: white; // DEBUG: test-color
                 > .program {
+                    @program-width: (@pop-content-width - 20*(@cols - 1) - 2*@cols) / @cols; // (container - margin - border) / #cols
                     float: left;
                     border: 1px solid @border-color;
                     margin-left: 20px;
-                    width: (@pop-content-width - 20*(@cols - 1) - 2*@cols) / @cols; // (container - margin - border) / #cols
+                    width: @program-width;
                     position: relative; // DEBUG: useful when content have absolute
                     margin-bottom: 20px;
                     &:hover {
@@ -145,6 +146,12 @@
                         width: 100%;
                         height: @program-height;
                         background-color: white;
+                        overflow: hidden;
+                        > img {
+                            height: 145px; 
+                            margin-top: 0px;
+                            margin-left: (@program-width - 174) / 2; // 174 --> img width
+                        }
                     }
                     > h3 {
                         text-align: center;
